@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang=es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de corto circuito en cables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Calculadora de corto circuito en cables</header>
+
+    <div>
+        <form action="">
+            <div class="caja9">
+                <label for="corriente_number" class="label-text-right">Corriente: </label>
+                <input type="number" min="1" value="20" name="corriente" id="corriente_number">
+                <input type="radio" name="opcion_formula" id="corriente_radio">
+
+                <label for="lista_desplegable_calibre" class="label-text-right">Calibre: </label>
+                <select name="lista_desplegable_calibre" id="lista_desplegable_calibre">
+                    <option value="14">14</option>
+                    <option value="12">12</option>
+                    <option value="10">10</option>
+                    <option value="8">8</option>
+                    <option value="6">6</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                    <option value="1/0">1/0</option>
+                    <option value="2/0">2/0</option>
+                    <option value="3/0">3/0</option>
+                    <option value="4/0">4/0</option>
+                    <option value="250">250</option>
+                    <option value="300">300</option>
+                    <option value="350">350</option>
+                    <option value="400">400</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="700">700</option>
+                    <option value="750">750</option>
+                    <option value="800">800</option>
+                    <option value="900">900</option>
+                    <option value="1000">1000</option>
+                    <option value="1250">1250</option>
+                    <option value="1500">1500</option>
+                    <option value="1750">1570</option>
+                    <option value="2000">2000</option>
+                    <Select></Select><input type="radio" name="opcion_formula" id="calibre">
+
+                <label for="tiempo_rumber" class="label-text-right">Tiempo (s)</label>
+                <input type="number" min="0.01" value="0.05" step="1" name="tiempo" id="tiempo_number">
+                <input type="radio" name="opcion_formula" id="tiempo_radio">
+            </div>
+
+            <div class="caja6_5_2_6_2">
+                <label for="material_cable" class="label-text-right">Material: </label>
+                <select name="material_cable" id="material_cable">
+                    <option value="cobre">Cobre</option>
+                    <option value="aluminio">Aluminio</option>
+                </select>
+
+                <label for="temperatura_1" class="label-text-right">T1: </label>
+                <input type="number" min="1" value="60" name="temperatura_1" id="temperatura_1">
+
+                <label for="lista_desplegable_temperatura_2_aislamiento" class="label-text-right">T2 (aislamiento): </label>
+                <select name="lista_desplegable_temperatura_2_aislamiento" id="lista_desplegable_temperatura_2_aislamiento">
+                    <option value="200">Aislamiento de papel, hule, tela barnizada, T2 = 200</option>
+                    <option value="150">Ailamiento termoplástico, T2 = 150</option>
+                    <option value="250">Ailamiento de polietileno de cadena cruzada, T2 = 250</option>
+                    <option value="250">Aislamiento de hule propileno etileno, t2 = 250</option>
+                </select>
+
+            </div>
+
+        </form>
+    </div>
+
+    
+</body>
+
+<footer>
+
+</footer>
+</html>
