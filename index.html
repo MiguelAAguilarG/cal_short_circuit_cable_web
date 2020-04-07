@@ -5,20 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de corto circuito en cables</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="calculadora, cable, conductor, corto circuito, short circuit">
+    <meta name="author" content="Miguel Ángel Aguilar García">
 </head>
 <body>
     <header>Calculadora de corto circuito en cables</header>
 
+    <div class="caja6">
+        <p></p>
+        <p class="text-p">Corriente [A]</p>
+        <p class="text-p">Calibre [AWG/kcmil]</p>
+        <p class="text-p">Área [mm^2]</p>
+        <p class="text-p">Área [cmil]</p>
+        <p class="text-p">Tiempo [s]</p>
+    </div>
+    <div class="caja6">
+        <p class = "margin-text">Calibre menor</p>
+        <p id="corriente_calibre_menor" class = "p_resultado"></p>
+        <p id="calibre_calibre_menor" class = "p_resultado"></p>
+        <p id="area_mm_calibre_menor" class = "p_resultado"></p>
+        <p id="area_cmil_calibre_menor" class = "p_resultado"></p>
+        <p id="tiempo_calibre_menor" class = "p_resultado"></p>
+    </div>
+    <div class="caja6">
+        <p class = "margin-text">Calibre</p>
+        <p id="corriente_calibre_aprox" class = "p_resultado"></p>
+        <p id="calibre_calibre_aprox" class = "p_resultado"></p>
+        <p id="area_mm_calibre_aprox" class = "p_resultado"></p>
+        <p id="area_cmil_calibre_aprox" class = "p_resultado"></p>
+        <p id="tiempo_calibre_aprox" class = "p_resultado"></p>
+    </div>
+    <div class="caja6">
+        <p class = "margin-text">Calibre mayor</p>
+        <p id="corriente_calibre_mayor" class = "p_resultado"></p>
+        <p id="calibre_calibre_mayor" class = "p_resultado"></p>
+        <p id="area_mm_calibre_mayor" class = "p_resultado"></p>
+        <p id="area_cmil_calibre_mayor" class = "p_resultado"></p>
+        <p id="tiempo_calibre_mayor" class = "p_resultado"></p>
+    </div>
+
     <div>
-        <form action="">
+
+        <form id="formulario">
             <div class="caja9">
-                <label for="corriente_number" class="label-text-right">Corriente: </label>
-                <input type="number" min="1" value="20" name="corriente" id="corriente_number">
-                <input type="radio" name="opcion_formula" id="corriente_radio">
+                <label for="corriente_number" id="corriente" class="label-text-right">Corriente: </label>
+                <input type="number" value="3000" min="0" step="100" name="corriente" id="corriente_number">
+                <input type="radio" name="opcion_formula" value="corriente" id="corriente_radio">
 
                 <label for="lista_desplegable_calibre" class="label-text-right">Calibre: </label>
                 <select name="lista_desplegable_calibre" id="lista_desplegable_calibre">
-                    <option value="14">14</option>
+                    <option value="14" id="14" >14</option>
                     <option value="12">12</option>
                     <option value="10">10</option>
                     <option value="8">8</option>
@@ -46,16 +82,17 @@
                     <option value="1500">1500</option>
                     <option value="1750">1570</option>
                     <option value="2000">2000</option>
-                    <Select></Select><input type="radio" name="opcion_formula" id="calibre">
+                <Select>
+                <input type="radio" name="opcion_formula" value="calibre" checked="checked" id="calibre_radio">
 
-                <label for="tiempo_rumber" class="label-text-right">Tiempo (s)</label>
-                <input type="number" min="0.01" value="0.05" step="1" name="tiempo" id="tiempo_number">
-                <input type="radio" name="opcion_formula" id="tiempo_radio">
+                <label for="tiempo_number" class="label-text-right">Tiempo</label>
+                <input type="number" value="0.5"  step="0.1" min="0" name="tiempo" id="tiempo_number">
+                <input type="radio" name="opcion_formula" value="tiempo" id="tiempo_radio">
             </div>
 
             <div class="caja6_5_2_6_2">
-                <label for="material_cable" class="label-text-right">Material: </label>
-                <select name="material_cable" id="material_cable">
+                <label for="lista_desplegable_material_cable" class="label-text-right">Material: </label>
+                <select name="lista_desplegable_material_cable" id="lista_desplegable_material_cable">
                     <option value="cobre">Cobre</option>
                     <option value="aluminio">Aluminio</option>
                 </select>
@@ -65,21 +102,21 @@
 
                 <label for="lista_desplegable_temperatura_2_aislamiento" class="label-text-right">T2 (aislamiento): </label>
                 <select name="lista_desplegable_temperatura_2_aislamiento" id="lista_desplegable_temperatura_2_aislamiento">
-                    <option value="200">Aislamiento de papel, hule, tela barnizada, T2 = 200</option>
-                    <option value="150">Ailamiento termoplástico, T2 = 150</option>
+                    <option value="200" >Aislamiento de papel, hule, tela barnizada, T2 = 200</option>
+                    <option selected value="150" id="aislamiento_termoplastico">Aislamiento termoplástico, T2 = 150</option>
                     <option value="250">Ailamiento de polietileno de cadena cruzada, T2 = 250</option>
-                    <option value="250">Aislamiento de hule propileno etileno, t2 = 250</option>
+                    <option value="250">Aislamiento de hule propileno etileno, T2 = 250</option>
                 </select>
-
             </div>
 
         </form>
     </div>
 
+    <script src="app.js"></script>
     
 </body>
 
 <footer>
-
+By Miguel Ángel Aguilar García
 </footer>
 </html>
