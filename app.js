@@ -80,24 +80,6 @@ function calculo_principal () {
 
         document.getElementById("corriente_number").value = $corriente_calculada;
 
-        var $area_circular_mil_mayor = calibre_a_cmil($calibre_number_mayor);
-        var $corriente_calculada_mayor = formula_corriente($material, $T2, $T1, $tiempo, $area_circular_mil_mayor);
-
-        document.getElementById("corriente_calibre_mayor").innerHTML = $corriente_calculada_mayor;
-        document.getElementById("calibre_calibre_mayor").innerHTML = $calibre_mayor;
-        document.getElementById("area_mm_calibre_mayor").innerHTML = cmil_a_mm_cuadrados($area_circular_mil_mayor);
-        document.getElementById("area_cmil_calibre_mayor").innerHTML = $area_circular_mil_mayor;
-        document.getElementById("tiempo_calibre_mayor").innerHTML = $tiempo;
-
-        var $area_circular_mil_menor = calibre_a_cmil($calibre_number_menor);
-        var $corriente_calculada_menor = formula_corriente($material, $T2, $T1, $tiempo, $area_circular_mil_menor);
-        
-        document.getElementById("corriente_calibre_menor").innerHTML = $corriente_calculada_menor;
-        document.getElementById("calibre_calibre_menor").innerHTML = $calibre_menor;
-        document.getElementById("area_mm_calibre_menor").innerHTML = cmil_a_mm_cuadrados($area_circular_mil_menor);
-        document.getElementById("area_cmil_calibre_menor").innerHTML = $area_circular_mil_menor;
-        document.getElementById("tiempo_calibre_menor").innerHTML = $tiempo;
-
         console.log($corriente_calculada);
         
     }else if (object_variables.$opcion_formula == 'calibre') {
@@ -121,28 +103,12 @@ function calculo_principal () {
                 var $calibre_number_mayor = calibres_number_array[index];
                 var $calibre_number_menor = calibres_number_array[index-1];
                 var $calibre_menor = calibres_string_array[index-1];
+
+                var $calibre_mayor = calibres_string_array[index];
+                var $calibre_menor = calibres_string_array[index-1];
                 break;
             }
         }
-
-        var $area_circular_mil_mayor = calibre_a_cmil($calibre_number_mayor);
-
-        var $corriente_calculada_mayor = formula_corriente($material, $T2, $T1, $tiempo, $area_circular_mil_mayor);
-
-        document.getElementById("corriente_calibre_mayor").innerHTML = $corriente_calculada_mayor;
-        document.getElementById("calibre_calibre_mayor").innerHTML = $calibre;
-        document.getElementById("area_mm_calibre_mayor").innerHTML = cmil_a_mm_cuadrados($area_circular_mil_mayor);
-        document.getElementById("area_cmil_calibre_mayor").innerHTML = $area_circular_mil_mayor;
-        document.getElementById("tiempo_calibre_mayor").innerHTML = $tiempo;
-
-        var $area_circular_mil_menor = calibre_a_cmil($calibre_number_menor);
-        var $corriente_calculada_menor = formula_corriente($material, $T2, $T1, $tiempo, $area_circular_mil_menor);
-        
-        document.getElementById("corriente_calibre_menor").innerHTML = $corriente_calculada_menor;
-        document.getElementById("calibre_calibre_menor").innerHTML = $calibre_menor;
-        document.getElementById("area_mm_calibre_menor").innerHTML = cmil_a_mm_cuadrados($area_circular_mil_menor);
-        document.getElementById("area_cmil_calibre_menor").innerHTML = $area_circular_mil_menor;
-        document.getElementById("tiempo_calibre_menor").innerHTML = $tiempo;
 
         console.log($area_circular_mil);
         console.log($calibre);
@@ -176,30 +142,29 @@ function calculo_principal () {
         
         document.getElementById("tiempo_number").value = $tiempo;
 
-        var $area_circular_mil_mayor = calibre_a_cmil($calibre_number_mayor);
-        var $corriente_calculada_mayor = formula_corriente($material, $T2, $T1, $tiempo, $area_circular_mil_mayor);
-
-        document.getElementById("corriente_calibre_mayor").innerHTML = $corriente_calculada_mayor;
-        document.getElementById("calibre_calibre_mayor").innerHTML = $calibre_mayor;
-        document.getElementById("area_mm_calibre_mayor").innerHTML = cmil_a_mm_cuadrados($area_circular_mil_mayor);
-        document.getElementById("area_cmil_calibre_mayor").innerHTML = $area_circular_mil_mayor;
-        document.getElementById("tiempo_calibre_mayor").innerHTML = $tiempo;
-
-        var $area_circular_mil_menor = calibre_a_cmil($calibre_number_menor);
-
-        var $corriente_calculada_menor = formula_corriente($material, $T2, $T1, $tiempo, $area_circular_mil_menor);
-        
-        document.getElementById("corriente_calibre_menor").innerHTML = $corriente_calculada_menor;
-        document.getElementById("calibre_calibre_menor").innerHTML = $calibre_menor;
-        document.getElementById("area_mm_calibre_menor").innerHTML = cmil_a_mm_cuadrados($area_circular_mil_menor);
-        document.getElementById("area_cmil_calibre_menor").innerHTML = $area_circular_mil_menor;
-        document.getElementById("tiempo_calibre_menor").innerHTML = $tiempo;
-
         console.log($tiempo);
         
     }else {
 
     }
+
+    var $area_circular_mil_mayor = calibre_a_cmil($calibre_number_mayor);
+    var $corriente_calculada_mayor = formula_corriente($material, $T2, $T1, $tiempo, $area_circular_mil_mayor);
+
+    document.getElementById("corriente_calibre_mayor").innerHTML = $corriente_calculada_mayor;
+    document.getElementById("calibre_calibre_mayor").innerHTML = $calibre_mayor;
+    document.getElementById("area_mm_calibre_mayor").innerHTML = cmil_a_mm_cuadrados($area_circular_mil_mayor);
+    document.getElementById("area_cmil_calibre_mayor").innerHTML = $area_circular_mil_mayor;
+    document.getElementById("tiempo_calibre_mayor").innerHTML = $tiempo;
+
+    var $area_circular_mil_menor = calibre_a_cmil($calibre_number_menor);
+    var $corriente_calculada_menor = formula_corriente($material, $T2, $T1, $tiempo, $area_circular_mil_menor);
+    
+    document.getElementById("corriente_calibre_menor").innerHTML = $corriente_calculada_menor;
+    document.getElementById("calibre_calibre_menor").innerHTML = $calibre_menor;
+    document.getElementById("area_mm_calibre_menor").innerHTML = cmil_a_mm_cuadrados($area_circular_mil_menor);
+    document.getElementById("area_cmil_calibre_menor").innerHTML = $area_circular_mil_menor;
+    document.getElementById("tiempo_calibre_menor").innerHTML = $tiempo;
 }
 
 function obtener_variables() {
