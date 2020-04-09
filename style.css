@@ -107,8 +107,8 @@ h3{
     text-align: center;
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 720px){
     body{
-        max-width: auto;
+        max-width: 100%;
     }
 }
