@@ -113,5 +113,5 @@ h3{
 
 @media screen and (max-width:650px) {
     body{max-width: 100%;}
-    .p_resultado{font-size:0.45em;}
+    .p_resultado{font-size:0.6em;}
     }
