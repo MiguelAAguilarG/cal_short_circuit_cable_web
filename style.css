@@ -107,8 +107,8 @@ h3{
     text-align: center;
 }
 
-@media screen and (max-width:800px) {
-    .left, .main, .right {
-      width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+@media only screen and (max-width: 1000px){
+    body{
+        max-width: auto;
     }
-  }
+}
