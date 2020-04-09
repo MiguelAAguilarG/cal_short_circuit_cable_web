@@ -272,15 +272,16 @@ function cmil_a_calibre($cmil) {
         }
     }
     else{
-        var aux= Math.round($cmil/1000)
+        var aux= $cmil/1000;
         for (let index = 0; index < calibres_number_array.length; index++) {
 
-            if (calibres_number_array[index] == aux) {
+            if (calibres_number_array[index] >= aux) {
                 var $calibre = calibres_string_array[index];
                 break;
             }
 
         }
+
     }
 
     return $calibre
