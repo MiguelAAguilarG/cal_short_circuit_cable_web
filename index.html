@@ -7,45 +7,50 @@
     <link rel="stylesheet" href="style.css">
     <meta name="keywords" content="calculadora, cable, conductor, corto circuito, short circuit">
     <meta name="author" content="Miguel Ángel Aguilar García">
+
 </head>
 <body>
     <header>Calculadora de corto circuito en cables</header>
 
-    <div class="caja6">
-        <p></p>
-        <p class="text-p">Corriente [A]</p>
-        <p class="text-p">Calibre [AWG/kcmil]</p>
-        <p class="text-p">Área [mm^2]</p>
-        <p class="text-p">Área [cmil]</p>
-        <p class="text-p">Tiempo [s]</p>
-    </div>
-    <div class="caja6">
-        <p class = "margin-text">Calibre menor</p>
-        <p id="corriente_calibre_menor" class = "p_resultado"></p>
-        <p id="calibre_calibre_menor" class = "p_resultado"></p>
-        <p id="area_mm_calibre_menor" class = "p_resultado"></p>
-        <p id="area_cmil_calibre_menor" class = "p_resultado"></p>
-        <p id="tiempo_calibre_menor" class = "p_resultado"></p>
-    </div>
-    <div class="caja6">
-        <p class = "margin-text">Calibre</p>
-        <p id="corriente_calibre_aprox" class = "p_resultado"></p>
-        <p id="calibre_calibre_aprox" class = "p_resultado"></p>
-        <p id="area_mm_calibre_aprox" class = "p_resultado"></p>
-        <p id="area_cmil_calibre_aprox" class = "p_resultado"></p>
-        <p id="tiempo_calibre_aprox" class = "p_resultado"></p>
-    </div>
-    <div class="caja6">
-        <p class = "margin-text">Calibre mayor</p>
-        <p id="corriente_calibre_mayor" class = "p_resultado"></p>
-        <p id="calibre_calibre_mayor" class = "p_resultado"></p>
-        <p id="area_mm_calibre_mayor" class = "p_resultado"></p>
-        <p id="area_cmil_calibre_mayor" class = "p_resultado"></p>
-        <p id="tiempo_calibre_mayor" class = "p_resultado"></p>
+    <h3>Resultados</h3>
+    <div class="caja_contenedor">
+        <div class="caja6">
+            <p></p>
+            <p class="text-p">Corriente <span class="text-chico">[A]</span></p>
+            <p class="text-p">Calibre <span class="text-chico">[AWG/kcmil]</span></p>
+            <p class="text-p">Área <span class="text-chico">[mm^2]</span></p>
+            <p class="text-p">Área <span class="text-chico">[cmil]</span></p>
+            <p class="text-p">Tiempo <span class="text-chico">[s]</span></p>
+        </div>
+        <div class="caja6">
+            <p class = "margin-text">Calibre menor</p>
+            <p id="corriente_calibre_menor" class = "p_resultado"></p>
+            <p id="calibre_calibre_menor" class = "p_resultado"></p>
+            <p id="area_mm_calibre_menor" class = "p_resultado"></p>
+            <p id="area_cmil_calibre_menor" class = "p_resultado"></p>
+            <p id="tiempo_calibre_menor" class = "p_resultado"></p>
+        </div>
+        <div class="caja6">
+            <p class = "margin-text">Calibre</p>
+            <p id="corriente_calibre_aprox" class = "p_resultado"></p>
+            <p id="calibre_calibre_aprox" class = "p_resultado"></p>
+            <p id="area_mm_calibre_aprox" class = "p_resultado"></p>
+            <p id="area_cmil_calibre_aprox" class = "p_resultado"></p>
+            <p id="tiempo_calibre_aprox" class = "p_resultado"></p>
+        </div>
+        <div class="caja6">
+            <p class = "margin-text">Calibre mayor</p>
+            <p id="corriente_calibre_mayor" class = "p_resultado"></p>
+            <p id="calibre_calibre_mayor" class = "p_resultado"></p>
+            <p id="area_mm_calibre_mayor" class = "p_resultado"></p>
+            <p id="area_cmil_calibre_mayor" class = "p_resultado"></p>
+            <p id="tiempo_calibre_mayor" class = "p_resultado"></p>
+        </div>
     </div>
 
-    <div>
+    <h3>Datos</h3>
 
+    <div class="caja_contenedor">
         <form id="formulario">
             <div class="caja9">
                 <label for="corriente_number" id="corriente" class="label-text-right">Corriente: </label>
@@ -54,7 +59,8 @@
 
                 <label for="lista_desplegable_calibre" class="label-text-right">Calibre: </label>
                 <select name="lista_desplegable_calibre" id="lista_desplegable_calibre">
-                    <option value="14" id="14" >14</option>
+                    <option value="0" hidden></option>
+                    <option value="14" selected>14</option>
                     <option value="12">12</option>
                     <option value="10">10</option>
                     <option value="8">8</option>
@@ -80,7 +86,7 @@
                     <option value="1000">1000</option>
                     <option value="1250">1250</option>
                     <option value="1500">1500</option>
-                    <option value="1750">1570</option>
+                    <option value="1750">1750</option>
                     <option value="2000">2000</option>
                 <Select>
                 <input type="radio" name="opcion_formula" value="calibre" checked="checked" id="calibre_radio">
@@ -117,6 +123,8 @@
 </body>
 
 <footer>
-By Miguel Ángel Aguilar García
+    <p class="nota">Tabla 240-92(b).Corriente nominal de cortocircuito de conductores de derivación</p>
+    <p class="nota">NOM-001-SEDE-2012</p>
+    <p id="autor" > By Miguel Ángel Aguilar García</p>
 </footer>
 </html>

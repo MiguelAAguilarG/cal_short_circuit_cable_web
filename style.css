@@ -10,6 +10,7 @@ body {
 
 header{
     font-size: x-large;
+    text-align: center;
     padding: 5px;
 }
 
@@ -23,38 +24,28 @@ p{
     padding: 0px;
 }
 
+h3{
+    margin: 0px;
+    padding: 0px;
+}
+
 .p_resultado{
     border: solid 1px;
     margin-right: 2px;
     margin-left: 2px;
     padding: 2px;
+    height: 1.4em;
+    width: initial;
+    min-width: 1em;
 }
 
-.label-text-right{
-    text-align: right;
-    padding: 1px;
-    margin: 1px;
-}
-
-.caja4{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column: 1 / -1;
-    padding: 1px;
-    border: solid 1px;
-}
-
-.caja5{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-column: 1 / -1;
-    padding: 1px;
+.caja_contenedor{
     border: solid 1px;
 }
 
 .caja6{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: minmax(5em, 0.6fr) 1fr minmax(5em, 0.4fr) 1fr 1fr 1fr;
     grid-column: 1 / -1;
     padding: 1px;
     border: solid 1px;
@@ -76,13 +67,9 @@ p{
     border: solid 1px;
 }
 
-.caja4, .caja5, .caja6, .caja9, .caja6_5_2_6_2, .text-p {
+.caja6, .caja9, .caja6_5_2_6_2{
     margin: 2px;
     padding: 2px;
-}
-
-.margin-5px{
-    margin: 5px;
 }
 
 .margin-text
@@ -97,3 +84,22 @@ p{
     padding: 1px;
     margin: 1px;
 }
+
+.label-text-right{
+    text-align: right;
+    padding: 1px;
+    margin: 1px;
+}
+
+.text-chico{
+    font-size: small;
+}
+
+.nota{
+    font-style: italic;
+    font-size: small;
+}
+
+#autor{
+    text-align: center;
+} 
