@@ -62,7 +62,7 @@ h3{
 
 .caja6_5_2_6_2{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;
+    grid-template-columns: 1fr minmax(5em, 5em) 1fr minmax(5em, 5em) minmax(5em, 2fr) minmax(5em, 2fr);
     grid-column: 1 / -1;
     padding: 1px;
     border: solid 1px;
