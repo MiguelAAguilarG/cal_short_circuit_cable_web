@@ -9,6 +9,7 @@ body {
 }
 
 header{
+    margin: 0 auto;
     font-size: x-large;
     text-align: center;
     padding: 5px;
@@ -25,7 +26,8 @@ p{
 }
 
 h3{
-    margin: 0px;
+    margin: 0px auto;
+    line-height: 1em;
     padding: 0px;
 }
 
@@ -101,5 +103,6 @@ h3{
 }
 
 #autor{
+    margin: 0 auto;
     text-align: center;
 } 
