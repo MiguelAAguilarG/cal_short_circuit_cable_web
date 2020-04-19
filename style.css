@@ -101,6 +101,12 @@ h3{
     font-size: small;
 }
 
+.nota_sinBullets{
+    font-style: italic;
+    font-size: small;
+    list-style-type: none;
+}
+
 #autor{
     margin: 0 auto;
     text-align: center;

@@ -5,7 +5,7 @@ const calibres_number_array = [14, 12, 10, 8, 6, 4, 3, 2, 1, 0, -1, -2, -3, 250,
 const calibres_area_mm_array =[2.08, 3.31, 5.26, 8.37, 13.3, 21.2, 26.7, 33.6, 42.4, 53.49, 67.43, 85.01, 107.2, 127, 152.0, 177, 203, 253, 304, 355, 380, 405, 456, 507, 633, 700, 887, 1013];
 
 window.addEventListener("load",calculo_principal,false);
-document.getElementById("formulario").addEventListener("change", calculo_principal)
+document.getElementById("formulario").addEventListener("change", calculo_principal);
 
 function calculo_principal () {
     document.getElementById("lista_desplegable_calibre").disabled = true;
