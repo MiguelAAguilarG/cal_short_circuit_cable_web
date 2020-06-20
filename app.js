@@ -24,7 +24,6 @@ function calculo_principal () {
     }
     else{
         document.getElementById("aislamiento_termoplastico").disabled = false;
-        document.getElementById("aislamiento_termoplastico").selected = true;
     }
     var $T1 = Number(object_variables.$T1);
     var $T2 = Number(object_variables.$T2);
